@@ -39,7 +39,7 @@ console.log(result);
 
 let username = 'ben'
 const firstChar = name => `${name.charAt(0).toUpperCase()}${name.slice(1)}`
-
+console.log(firstChar(username));
 function getdetails(user, callback) {
     return callback( firstChar(user))
 }
