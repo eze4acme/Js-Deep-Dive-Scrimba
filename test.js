@@ -19,7 +19,7 @@
 
 function encap(){
     let user = 'Peter Obi'
-    let message = `serve Nigeria from total colapse`
+    let message = `save Nigeria from total colapse`
     return function () {
     return    `${user} ${message}`
     }
