@@ -1,20 +1,20 @@
-// function getData (baseUrl) {
-//     return function (route){
-//         return function (callback){
-//             fetch(`${baseUrl}${route}`)
-//             .then(response => response.json())
-//             .then(data => callback(data))
+function getData (baseUrl) {
+    return function (route){
+        return function (callback){
+            fetch(`${baseUrl}${route}`)
+            .then(response => response.json())
+            .then(data => callback(data))
 
-//         }
-//     }
-// }
+        }
+    }
+}
 
 
-// socialMediaData = getData('https://jsonplaceholder.typicode.com')
-// getSocialMediaPost = socialMediaData('/posts')
-// getSocialMediaPost(posts => {
-//     posts.forEach(post => console.log(post.title));
-// });
+socialMediaData = getData('https://jsonplaceholder.typicode.com')
+getSocialMediaPost = socialMediaData('/posts')
+getSocialMediaPost(posts => {
+    posts.forEach(post => console.log(post.title));
+});
 
 
 function encap(){
