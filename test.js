@@ -1,7 +1,17 @@
 const url = 'https://jsonplaceholder.typicode.com'
 const route ='/posts'
 
+function getData(baseUrl) {
+    return function (route) {
+        return function (callback) {
+            fetch(url)
+            .then(response => response.json())
+            .then(data => callback(data))
+        }
+    }
+}
 
+const getpost = getD
 
 
 
