@@ -1,20 +1,23 @@
-function getData (baseUrl) {
-    return function (route){
-        return function (){
-            fetch(`${baseUrl}${route}`)
+
+function getData (url) {
+    return function (endpoint){
+        return function (callback){
+            fetch(`${url}${endpoint}`)
             .then(response => response.json())
-            .then(data => data)
+            .then(data => callback(data))
 
         }
     }
 }
 
-
-socialMediaData = getData('https://jsonplaceholder.typicode.com')
-getSocialMediaPost = socialMediaData('/posts')
+const socialMediaData = getData('https://jsonplaceholder.typicode.com')
+const getSocialMediaPost = socialMediaData('/posts')
 getSocialMediaPost(posts => {
-    posts.forEach(post => console.log(post.title));
+    posts.map(post => console.log(post.title));
 });
+
+
+
 
 
 // function encap(){
