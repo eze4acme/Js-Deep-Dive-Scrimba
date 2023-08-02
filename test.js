@@ -1,21 +1,6 @@
 const baseUrl = 'https://jsonplaceholder.typicode.com'
 const route = '/posts'
-function getData (url) {
-    return function (endpoint){
-        return function (callback){
-            fetch(`${url}${endpoint}`)
-            .then(response => response.json())
-            .then(data =>  callback(data))
 
-        }
-    }
-}
-
-const socialMediaData = getData(baseUrl)
-const getSocialMediaPost = socialMediaData(route)
-getSocialMediaPost(posts => {
-    posts.map(post => console.log(post.title));
-});
 
 
 
