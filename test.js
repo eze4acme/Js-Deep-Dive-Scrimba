@@ -39,14 +39,14 @@ function test(plots){
 const result = test('');
 console.log(result);
 
-let username = 'ben'
-const firstChar = name => `${name.at(0).toUpperCase()}${name.slice(1)}`
-console.log(firstChar(username));
-function getdetails(user, callback) {
-    return callback( firstChar(user))
-}
+// let username = 'ben'
+// const firstChar = name => `${name.at(0).toUpperCase()}${name.slice(1)}`
+// console.log(firstChar(username));
+// function getdetails(user, callback) {
+//     return callback( firstChar(user))
+// }
 
-const getResult = getdetails(username, (user) => `Hello ${user} how are you doing brother!!!`)
+// const getResult = getdetails(username, (user) => `Hello ${user} how are you doing brother!!!`)
 
 
-console.log(getResult);
+// console.log(getResult);
